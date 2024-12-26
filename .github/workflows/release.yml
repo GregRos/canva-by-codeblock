@@ -29,7 +29,6 @@ jobs:
                   echo "$GITHUB_REF_NAME"
                   tag="$GITHUB_REF_NAME"
                   echo "Creating release for tag $tag"
-                  gh release create "$tag" \
+                  gh release create $tag \
                     --title="$tag" \
-                    --draft \
                     main.js manifest.json styles.css
