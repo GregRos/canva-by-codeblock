@@ -1,7 +1,7 @@
 {
 	"id": "canva-embed",
 	"name": "Canva Embed",
-	"version": "1.0.0",
+	"version": "1.0.4",
 	"minAppVersion": "0.15.0",
 	"description": "Embed Canva designs in your notes",
 	"author": "GregRos",
