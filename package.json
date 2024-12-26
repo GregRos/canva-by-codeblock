@@ -9,7 +9,8 @@
 	"scripts": {
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
 		"dev": "node esbuild.config.mjs",
-		"version": "node version-bump.mjs && git add manifest.json versions.json"
+		"version": "node version-bump.mjs",
+		"tag": "node tag.mjs "
 	},
 	"devDependencies": {
 		"@types/node": "^16.11.6",
