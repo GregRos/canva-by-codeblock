@@ -26,8 +26,9 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
+                  echo "GITHUB_REF: $GITHUB_REF"
                   tag="${GITHUB_REF#refs/tags/}"
-
+                  echo "Creating release for tag $tag"
                   gh release create "$tag" \
                     --title="$tag" \
                     --draft \
