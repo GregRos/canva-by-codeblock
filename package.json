@@ -1,16 +1,16 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "canva-embed",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "Embed Canva designs in your notes",
+	"keywords": [],
+	"license": "MIT",
+	"author": "",
 	"main": "main.js",
 	"scripts": {
-		"dev": "node esbuild.config.mjs",
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+		"dev": "node esbuild.config.mjs",
 		"version": "node version-bump.mjs && git add manifest.json versions.json"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "MIT",
 	"devDependencies": {
 		"@types/node": "^16.11.6",
 		"@typescript-eslint/eslint-plugin": "5.29.0",
