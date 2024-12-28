@@ -9,17 +9,19 @@
 	"main": "main.js",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/GregRos/canva-by-codeblock",
+		"url": "git+https://github.com/GregRos/canva-embed",
 		"directory": "packages/plugin"
 	},
 	"scripts": {
-		"build": "tsc -noEmit -skipLibCheck && sass node esbuild.config.mjs production",
+		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
 		"watch": "node esbuild.config.mjs",
 		"version": "node tools/version-bump.mjs",
-		"tag": "node tools/tag.mjs "
+		"tag": "node tools/tag.mjs ",
+		"get-version": "node tools/get-version.cjs",
+		"fix-version": "node tools/fix-version.mjs"
 	},
 	"devDependencies": {
-		"@obsidian-canva-embed/parser": "^0.1.0",
+		"canva-embed-parser": "^0.1.0",
 		"@types/node": "^16.11.6",
 		"builtin-modules": "3.3.0",
 		"esbuild": "^0.24.2",
