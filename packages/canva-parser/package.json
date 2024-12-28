@@ -1,11 +1,14 @@
 {
 	"name": "@obsidian-canva-embed/parser",
+	"private": false,
 	"version": "0.1.0",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
+	"main": "src/index.js",
+	"scripts": {},
 	"author": "GregRos",
 	"license": "MIT",
-	"description": "Parses codeblocks for embedding Canva designs in Obsidian notes"
+	"description": "You probably don't need this.",
+	"devDependencies": {
+		"@types/node": "^22.10.2",
+		"typescript": "^5.7.2"
+	}
 }

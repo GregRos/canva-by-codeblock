@@ -1,11 +1,12 @@
 {
-	"name": "canva-embed",
-	"version": "1.0.4",
-	"description": "Embed Canva designs in your notes",
+	"name": "obsidian-canva-embed",
+	"private": true,
+	"workspaces": [
+		"packages/*"
+	],
 	"keywords": [],
 	"license": "MIT",
-	"author": "",
-	"main": "main.js",
+	"author": "GregRos",
 	"scripts": {
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
 		"dev": "node esbuild.config.mjs",
@@ -16,6 +17,7 @@
 		"@types/node": "^16.11.6",
 		"@typescript-eslint/eslint-plugin": "5.29.0",
 		"@typescript-eslint/parser": "5.29.0",
+		"eslint": "8.7.0",
 		"builtin-modules": "3.3.0",
 		"esbuild": "0.17.3",
 		"obsidian": "latest",

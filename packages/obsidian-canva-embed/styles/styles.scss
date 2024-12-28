@@ -1,0 +1,53 @@
+.canva-embed {
+	&__wrapper {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 0;
+		box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
+		margin-top: 1.6em;
+		margin-bottom: 0.9em;
+		overflow: hidden;
+		border-radius: 8px;
+		will-change: transform;
+	}
+
+	&__iframe {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	&__error {
+		background-color: rgb(91, 20, 20);
+		border: 3px solid black;
+		&__legend {
+			font-weight: 500;
+			text-transform: uppercase;
+			text-align: center;
+			line-height: 1.25;
+			background: red;
+			margin-bottom: 20px;
+		}
+		&__title {
+			line-height: 1;
+			font-size: 2em;
+			padding-left: 20px;
+			padding-right: 20px;
+			font-weight: bold;
+		}
+		&__url {
+			font-family: monospace;
+			font-size: 1.2em;
+			padding-left: 20px;
+			padding-right: 20px;
+			white-space-collapse: preserve;
+			font-size: 0.8em;
+		}
+	}
+}
