@@ -1,10 +1,12 @@
-name: Release Obsidian plugin
+name: Parser - Publish
 
 on:
     push:
         tags:
             - "*"
 
+        paths:
+            - "packages/canva-parser"
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -19,16 +21,12 @@ jobs:
 
             - name: Build plugin
               run: |
-                  npm install
-                  npm run build
+                  npm install --workspace=@obsidian-canva-embed/canva-parser
+                  npm run build --workspace=@obsidian-canva-embed/canva-parser
 
-            - name: Create release
+            - name: Publish package
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
               run: |
-                  echo "$GITHUB_REF_NAME"
-                  tag="$GITHUB_REF_NAME"
-                  echo "Creating release for tag $tag"
-                  gh release create $tag \
-                    --title="$tag" \
-                    main.js manifest.json styles.css
+                  echo "Publishing package"
+                  npm publish --workspace=@obsidian-canva-embed/canva-parser

@@ -1,9 +1,9 @@
-name: Release Obsidian plugin
+name: Plugin - Release
 
 on:
     push:
-        tags:
-            - "*"
+        branches:
+            - master
 
 jobs:
     build:
@@ -19,16 +19,17 @@ jobs:
 
             - name: Build plugin
               run: |
-                  npm install
-                  npm run build
+                  npm install --workspace=obsidian-canva-embed
+                  npm run build --workspace=obsidian-canva-embed
 
             - name: Create release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              working-directory: packages/obsidian-canva-embed
               run: |
                   echo "$GITHUB_REF_NAME"
                   tag="$GITHUB_REF_NAME"
                   echo "Creating release for tag $tag"
                   gh release create $tag \
                     --title="$tag" \
-                    main.js manifest.json styles.css
+                    dist/main.js dist/manifest.json dist/styles.css dist/versions.json
