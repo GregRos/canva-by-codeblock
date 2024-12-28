@@ -30,12 +30,17 @@ jobs:
                   npm run parser -- run build
                   npm run plugin -- install
                   npm run plugin -- run build
+            - name: Get version string
+              id: version
+              run: |
+                  cd packages/plugin
+                  echo "result=$(node tools/get-version.cjs)" >> "$GITHUB_OUTPUT"
             - name: Tag and release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                   set -ex
-                  version="$(cd packages/plugin; node tools/get-version.cjs)"
+                  version="${{ steps.version.outputs.result }}"
                   echo "Version: $version"
                   git tag -a $version -m "$version"
                   git push origin "$version"
