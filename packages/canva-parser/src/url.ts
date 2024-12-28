@@ -1,4 +1,4 @@
-import { CanvaEmbedParseError } from "./error
+import { CanvaEmbedParseError } from "./error.js";
 
 const canvaEmbedRegex = /^https:\/\/www.canva.com\/design.*$/;
 

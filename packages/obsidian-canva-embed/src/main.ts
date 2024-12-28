@@ -1,13 +1,13 @@
 import { MarkdownPostProcessorContext, Plugin } from "obsidian";
-import { CANVA } from "
-
-import { processEmbed } from "./parse";
-
+import { ERROR } from "./error";
+import { CANVA } from "./canva";
+import { processCodeBlock } from "./process-code-block";
+import "./embed-styling.scss";
 export default class EmbedCanva extends Plugin {
 	async onload() {
 		this.registerMarkdownCodeBlockProcessor("canva", (source, el, ctx) => {
 			try {
-				const embedInfo = processEmbed(source, el, ctx);
+				const embedInfo = processCodeBlock(source, el, ctx);
 				CANVA(el, embedInfo);
 			} catch (error) {
 				ERROR(el, error);

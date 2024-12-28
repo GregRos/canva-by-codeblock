@@ -1,5 +1,5 @@
-import { CanvaEmbedParseError } from "./error";
-import { CanvaEmbedBlockConfig } from "./types";
+import { CanvaEmbedParseError } from "./error.js";
+import { CanvaEmbedBlockConfig } from "./types.js";
 
 const canvasRegex = /^canva\s*/;
 
@@ -16,7 +16,9 @@ function parseProperty(key: string, value: string) {
 			return value;
 	}
 }
-export function parseLanguage<Config extends CanvaEmbedBlockConfig>(
+export function parseLanguage<
+	Config extends CanvaEmbedBlockConfig = CanvaEmbedBlockConfig
+>(
 	lang: string
 ): {
 	[key in keyof Config]?: Config[key];

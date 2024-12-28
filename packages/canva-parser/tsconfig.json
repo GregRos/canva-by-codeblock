@@ -2,10 +2,10 @@
 	"compilerOptions": {
 		"inlineSourceMap": true,
 		"inlineSources": true,
-		"module": "ESNext",
-		"target": "ES6",
+		"module": "NodeNext",
+		"target": "ES2020",
 		"noImplicitAny": true,
-		"moduleResolution": "node",
+		"moduleResolution": "nodenext",
 		"importHelpers": true,
 		"isolatedModules": true,
 		"strictNullChecks": true,

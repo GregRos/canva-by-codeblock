@@ -1,12 +1,8 @@
 import { EmbedError } from "src/error";
 
 export function ERROR(el: HTMLElement, error: Error) {
-	let title = "Unxpected error";
-	let extra = error.message;
-	if (error instanceof EmbedError) {
-		title = error.title;
-		extra = error.extra;
-	}
+	const title = error.name ?? "Unxpected error";
+	const extra = error.message;
 	const err = el.createEl("div", {
 		cls: "canva-embed__error",
 	});
