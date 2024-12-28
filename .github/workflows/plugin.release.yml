@@ -11,6 +11,7 @@ on:
             - README.md
             - LICENSE.md
             - versions.json
+            - .github/workflows/plugin.release.yml
 
 jobs:
     build:
@@ -26,7 +27,7 @@ jobs:
             - name: Build plugin
               run: |
                   npm run plugin -- install
-                  npm run plugin -- build
+                  npm run plugin -- run build
             - name: Tag and release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
