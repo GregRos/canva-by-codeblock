@@ -37,7 +37,7 @@ jobs:
                   set -ex
                   version="$(cd packages/plugin; node tools/get-version.cjs)"
                   echo "Version: $version"
-                  git tag -a $version" -m "$version"
+                  git tag -a $version -m "$version"
                   git push origin "$version"
                   gh release create "$version" \
                     --title="$version" \
