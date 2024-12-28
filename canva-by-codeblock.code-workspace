@@ -6,7 +6,7 @@
 		},
 		{
 			"name": "parser",
-			"path": "__PUBLISHED"
+			"path": "packages/parser"
 		},
 		{
 			"name": "workspace",
@@ -15,6 +15,7 @@
 	],
 	"settings": {
 		"files.exclude": {
+			"packages": true,
 			"**/.git": true,
 			"**/CVS": true,
 			"**/.DS_Store": true,

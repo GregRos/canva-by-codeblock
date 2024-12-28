@@ -1,4 +1,4 @@
-import { EmbedError } from "src/error";
+import {} from "@obsidian-canva-embed/parser";
 
 export function ERROR(el: HTMLElement, error: Error) {
 	const title = error.name ?? "Unxpected error";

@@ -7,12 +7,6 @@
 	"keywords": [],
 	"license": "MIT",
 	"author": "GregRos",
-	"scripts": {
-		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
-		"dev": "node esbuild.config.mjs",
-		"version": "node version-bump.mjs",
-		"tag": "node tag.mjs "
-	},
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "5.29.0",
 		"@typescript-eslint/parser": "5.29.0",

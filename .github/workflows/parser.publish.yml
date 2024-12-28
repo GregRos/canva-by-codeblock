@@ -6,7 +6,7 @@ on:
             - "*"
 
         paths:
-            - "packages/canva-parser"
+            - "packages/parser"
 jobs:
     build:
         runs-on: ubuntu-latest
