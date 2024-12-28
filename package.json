@@ -10,10 +10,10 @@
 	"scripts": {
 		"parser": "npm --workspace=canva-embed-parser",
 		"plugin": "npm --workspace=plugin",
-		"build:parser": "npm run plugin -- run build",
-		"watch:parser": "npm run plugin -- run watch",
-		"build:plugin": "npm run parser -- run build",
-		"watch:plugin": "npm run parser -- run watch",
+		"build:parser": "npm run parser -- run build",
+		"watch:parser": "npm run parser -- run watch",
+		"build:plugin": "npm run plugin -- run build",
+		"watch:plugin": "npm run plugin -- run watch",
 		"build": "run-s build:parser build:plugin",
 		"watch": "npm run build:parser && run-p watch:parser watch:plugin",
 		"tag": "node tools/tag.js"
