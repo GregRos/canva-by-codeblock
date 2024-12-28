@@ -35,6 +35,12 @@ jobs:
               run: |
                   cd packages/plugin
                   echo "result=$(node tools/get-version.cjs)" >> "$GITHUB_OUTPUT"
+
+            - name: Push tag
+              uses: actions-ecosystem/action-push-tag@v1
+              with:
+                    tag: ${{ steps.version.outputs.result }}
+                    message: "${{ steps.version.outputs.result }}"
             - name: Tag and release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -42,8 +48,6 @@ jobs:
                   set -ex
                   version="${{ steps.version.outputs.result }}"
                   echo "Version: $version"
-                  git tag -a $version -m "$version"
-                  git push origin "$version"
                   gh release create "$version" \
                     --title="$version" \
                     packages/plugin/dist/{main.js,styles.css} \
