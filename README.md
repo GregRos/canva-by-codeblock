@@ -64,3 +64,7 @@ The size needs to match the size of the design, or at least the aspect ratio.
 ## Errors
 
 Invalid URLs, invalid sizes, and other issues will cause the plugin to display an error message instead of the design.
+
+## Development
+
+This plugin is managed in a monorepo together with some other stuff related to it. Plugin code is at [packages/plugin](packages/plugin).

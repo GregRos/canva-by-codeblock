@@ -1,5 +1,5 @@
 {
-	"name": "obsidian-canva-embed",
+	"name": "canva-by-codeblock",
 	"private": true,
 	"workspaces": [
 		"packages/*"

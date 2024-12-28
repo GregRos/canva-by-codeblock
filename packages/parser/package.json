@@ -2,8 +2,20 @@
 	"name": "@obsidian-canva-embed/parser",
 	"private": false,
 	"version": "0.1.0",
-	"main": "src/index.js",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
 	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/GregRos/canva-by-codeblock",
+		"directory": "packages/parser"
+	},
 	"scripts": {
 		"build": "tsc",
 		"watch": "tsc -w"

@@ -7,6 +7,11 @@
 	"license": "MIT",
 	"author": "GregRos",
 	"main": "main.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/GregRos/canva-by-codeblock",
+		"directory": "packages/parser"
+	},
 	"scripts": {
 		"build": "tsc -noEmit -skipLibCheck && sass node esbuild.config.mjs production",
 		"watch": "node esbuild.config.mjs",

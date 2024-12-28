@@ -1,0 +1,60 @@
+{
+	"folders": [
+		{
+			"name": "plugin",
+			"path": "packages/plugin"
+		},
+		{
+			"name": "parser",
+			"path": "__PUBLISHED"
+		},
+		{
+			"name": "workspace",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.git": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/Thumbs.db": true,
+			"**/dist": true,
+			"**/.yarn": true,
+			"**/node_modules": true,
+			"**/*.tsbuildinfo": true,
+			"**/.obsidian": true,
+			"__PUBLISHED": true,
+			"__PUBLISHED/__PLATFORM": true,
+			"__PLATFORM": true,
+			".gitmodules": true
+		},
+		"explorer.fileNesting.patterns": {
+			"*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+			"package.json": ".npmignore",
+			"tsconfig.json": "tsconfig.esm.json, tsconfig.cjs.json, tsconfig.test.json",
+			"tsconfig.base.json": "tsconfig.base.*.json",
+			".yarnrc.yml": "yarn.lock",
+			".eslintrc*": ".eslintignore",
+			".prettierrc*": ".prettierignore, .editorconfig",
+			".gitignore": ".gitattributes",
+			"README.md": "LICENSE.md"
+		},
+		"explorer.fileNesting.enabled": true,
+		"typescript.tsserver.experimental.enableProjectDiagnostics": true,
+		"apc.stylesheet": {
+			".explorer-folders-view.explorer-folders-view .monaco-list-row": {
+				"background-image": "linear-gradient(to right, #0E5DE610, transparent)",
+				"border-left": "2px solid #7DADFF7D"
+			},
+			".explorer-folders-view.explorer-folders-view.explorer-folders-view .monaco-list-row.monaco-list-row:has(.monaco-icon-label[aria-label*='__PLATFORM'])": {
+				"background-image": "linear-gradient(to right, #EA080833, transparent)",
+				"border-left": "2px solid #EA080879 "
+			},
+			".explorer-folders-view.explorer-folders-view .monaco-li    bst-row:has(.monaco-icon-label[aria-label*='__PUBLISHED'])": {
+				"background-image": "linear-gradient(to right, #6EED1314, transparent)",
+				"border-left": "2px solid #6EED137C"
+			}
+		}
+	}
+}
