@@ -13,7 +13,7 @@
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/GregRos/canva-embed",
+		"url": "git+https://github.com/GregRos/canva-embed.git",
 		"directory": "packages/parser"
 	},
 	"scripts": {

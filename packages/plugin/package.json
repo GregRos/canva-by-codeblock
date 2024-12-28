@@ -9,7 +9,7 @@
 	"main": "main.js",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/GregRos/canva-embed",
+		"url": "git+https://github.com/GregRos/canva-embed.git",
 		"directory": "packages/plugin"
 	},
 	"scripts": {

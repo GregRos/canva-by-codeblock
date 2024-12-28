@@ -9,7 +9,7 @@ on:
             - "packages/parser/**"
             - .github/workflows/parser.publish.yml
 jobs:
-    build:
+    publish:
         runs-on: ubuntu-latest
 
         steps:

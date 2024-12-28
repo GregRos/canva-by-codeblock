@@ -14,7 +14,7 @@ on:
             - .github/workflows/plugin.release.yml
 
 jobs:
-    build:
+    release:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
