@@ -5,7 +5,7 @@ import {
 	CanvaEmbedParseError,
 	normalizeCanvaUrl,
 	parseLanguage,
-} from "@obsidian-canva-embed/parser";
+} from "canva-embed-parser";
 export function processCodeBlock(
 	source: string,
 	el: HTMLElement,

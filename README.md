@@ -1,10 +1,12 @@
 # Canva Embed
 
-This Obsidian plugin allows you to embed Canva designs in your notes. The design is embedded as an iframe using Canva's official iframe embed component, so it will include the Canva branding and a link to the design on Canva's website.
+This Obsidian plugin allows you to embed Canva designs in your notes.
+
+The embed will look the official Canva embeds, so it will have a frame, a logo, and some basic controls.
 
 ## Usage
 
-To embed a Canva design, you need to generate a public URL for it first. Some of these features might be behind a paywall.
+To embed a Canva design, you need to generate a public URL for it first.
 
 ### Generating a public URL
 
@@ -49,7 +51,7 @@ https://www.canva.com/design/DaSwefd_a/mV-dfaAsdF/view?utm_content=DAGaZzWN_Us&u
 
 ### Configuring height and width
 
-The iframe doesn't know the size of the design and by default it will be pretty big. This will usually cause letterboxing.
+The embed doesn't know the size of the design and by default it will be pretty big. This will usually cause letterboxing.
 
 To avoid this, you must specify the height and width of the embed as a configuration option to the codeblock, as follows:
 
@@ -59,12 +61,16 @@ https://www.canva.com/design/DaSwefd_a/mV-dfaAsdF/view
 ```
 ````
 
-The size needs to match the size of the design, or at least the aspect ratio.
+The size should match the size of the design, or at least the aspect ratio.
 
 ## Errors
 
 Invalid URLs, invalid sizes, and other issues will cause the plugin to display an error message instead of the design.
 
+This plugin fails hard, not soft.
+
 ## Development
 
 This plugin is managed in a monorepo together with some other stuff related to it. Plugin code is at [packages/plugin](packages/plugin).
+
+I'm not planning on maintaining this plugin except for my own uses, so I'm not accepting bug reports or anything. Feel free to fork it and do whatever you want with it.

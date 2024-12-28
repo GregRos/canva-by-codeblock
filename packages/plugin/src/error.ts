@@ -1,5 +1,3 @@
-import {} from "@obsidian-canva-embed/parser";
-
 export function ERROR(el: HTMLElement, error: Error) {
 	const title = error.name ?? "Unxpected error";
 	const extra = error.message;

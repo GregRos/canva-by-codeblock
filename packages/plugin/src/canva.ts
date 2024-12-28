@@ -1,4 +1,4 @@
-import { CanvaEmbedBlock } from "@obsidian-canva-embed/parser";
+import { CanvaEmbedBlock } from "canva-embed-parser";
 
 function getPropsAsDataAttributes(props: CanvaEmbedBlock) {
 	const attributes = [];

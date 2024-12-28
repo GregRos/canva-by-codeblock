@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
-		"inlineSourceMap": true,
-		"inlineSources": true,
+		"sourceMap": true,
+		"sourceRoot": "src",
 		"declaration": true,
 		"declarationMap": true,
 		"module": "NodeNext",
@@ -10,7 +10,8 @@
 		"moduleResolution": "nodenext",
 		"isolatedModules": true,
 		"strictNullChecks": true,
-		"lib": ["ES7", "DOM"]
+		"lib": ["ES7", "DOM"],
+		"outDir": "./dist"
 	},
 	"include": ["**/*.ts"]
 }

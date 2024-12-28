@@ -3,6 +3,10 @@ import { CanvaEmbedBlockConfig } from "./types.js";
 
 const canvasRegex = /^canva\s*/;
 
+export function isCanvaLanguage(lang: string) {
+	return canvasRegex.test(lang);
+}
+
 function parseProperty(key: string, value: string) {
 	switch (key) {
 		case "size":
@@ -23,7 +27,7 @@ export function parseLanguage<
 ): {
 	[key in keyof Config]?: Config[key];
 } {
-	if (!canvasRegex.test(lang)) {
+	if (!isCanvaLanguage(lang)) {
 		throw new CanvaEmbedParseError("Expected canva language", lang);
 	}
 	const noCanva = lang.replace(canvasRegex, "");

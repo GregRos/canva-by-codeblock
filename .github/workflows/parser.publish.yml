@@ -2,8 +2,8 @@ name: Parser - Publish
 
 on:
     push:
-        tags:
-            - "*"
+        branches:
+            - master
 
         paths:
             - "packages/parser"
@@ -21,12 +21,12 @@ jobs:
 
             - name: Build plugin
               run: |
-                  npm install --workspace=@obsidian-canva-embed/canva-parser
-                  npm run build --workspace=@obsidian-canva-embed/canva-parser
+                  npm run parser -- install
+                  npm run parser -- build
 
             - name: Publish package
               env:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
               run: |
                   echo "Publishing package"
-                  npm publish --workspace=@obsidian-canva-embed/canva-parser
+                  npm run parser -- publish
