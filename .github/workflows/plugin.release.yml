@@ -35,9 +35,9 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                   set -ex
-                  version="$(npm run plugin -- run get-version)"
+                  version="$(cd packages/plugin; node tools/get-version.js)"
                   echo "Version: $version"
-                  git tag -a "$version" -m "$version"
+                  git tag -a $version" -m "$version"
                   git push origin "$version"
                   gh release create "$version" \
                     --title="$version" \
