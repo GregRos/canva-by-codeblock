@@ -6,7 +6,7 @@ on:
             - master
 
         paths:
-            - "packages/parser"
+            - "packages/parser/**"
 jobs:
     build:
         runs-on: ubuntu-latest
