@@ -26,6 +26,8 @@ jobs:
 
             - name: Build plugin
               run: |
+                  npm run parser -- install
+                  npm run parser -- run build
                   npm run plugin -- install
                   npm run plugin -- run build
             - name: Tag and release
