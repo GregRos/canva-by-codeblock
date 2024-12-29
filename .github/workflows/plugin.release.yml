@@ -37,10 +37,15 @@ jobs:
                   echo "result=$(node tools/get-version.cjs)" >> "$GITHUB_OUTPUT"
                   cd ../..
             - name: Push tag
-              uses: actions-ecosystem/action-push-tag@v1
-              with:
-                    tag: ${{ steps.version.outputs.result }}
-                    message: "${{ steps.version.outputs.result }}"
+              run:
+                tag="${{ steps.version.outputs.result }}"
+                message="${{ steps.version.outputs.result }}"
+
+                git config user.name "${GITHUB_ACTOR}"
+                git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
+                git tag -a "${tag}" -m "${message}"
+                git push origin "${tag}"
             - name: Tag and release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
