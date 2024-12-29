@@ -23,7 +23,7 @@ jobs:
             - name: Build plugin
               run: |
                   npm run parser -- install
-                  npm run build
+                  npm run parser -- build
 
             - name: Publish package
               env:
