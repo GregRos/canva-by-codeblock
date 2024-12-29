@@ -20,6 +20,28 @@ function parseProperty(key: string, value: string) {
 			return value;
 	}
 }
+
+export function parseMeta<
+	Config extends CanvaEmbedBlockConfig = CanvaEmbedBlockConfig
+>(
+	meta: string
+): {
+	[key in keyof Config]?: Config[key];
+} {
+	const kvps = meta.split(";;");
+	const props: any = {};
+	for (const kvp of kvps) {
+		const arr = kvp.split("=");
+		if (arr.length !== 2) {
+			throw new CanvaEmbedParseError("Bad meta entry", kvp);
+		}
+		const [key, pValue] = arr;
+		const value = parseProperty(key, pValue);
+		props[key] = value;
+	}
+
+	return props as Config;
+}
 export function parseLanguage<
 	Config extends CanvaEmbedBlockConfig = CanvaEmbedBlockConfig
 >(
@@ -34,17 +56,5 @@ export function parseLanguage<
 	if (noCanva === "") {
 		return {};
 	}
-	const kvps = noCanva.split(";;");
-	const props: any = {};
-	for (const kvp of kvps) {
-		const arr = kvp.split("=");
-		if (arr.length !== 2) {
-			throw new CanvaEmbedParseError("Bad config entry", kvp);
-		}
-		const [key, pValue] = arr;
-		const value = parseProperty(key, pValue);
-		props[key] = value;
-	}
-
-	return props;
+	return parseMeta<Config>(noCanva);
 }
