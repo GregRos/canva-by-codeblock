@@ -37,6 +37,8 @@ jobs:
                   echo "result=$(node tools/get-version.cjs)" >> "$GITHUB_OUTPUT"
                   cd ../..
             - name: Push tag
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                 set -ex
                 tag="${{ steps.version.outputs.result }}"
