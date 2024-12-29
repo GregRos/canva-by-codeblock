@@ -38,6 +38,7 @@ jobs:
                   cd ../..
             - name: Push tag
               run:
+                set -ex
                 tag="${{ steps.version.outputs.result }}"
                 message="${{ steps.version.outputs.result }}"
 
