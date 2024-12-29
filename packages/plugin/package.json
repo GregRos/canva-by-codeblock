@@ -21,7 +21,7 @@
 		"fix-version": "node tools/fix-version.mjs"
 	},
 	"devDependencies": {
-		"canva-embed-parser": "^0.1.0",
+		"canva-embed-parser": "^0.2.0",
 		"@types/node": "^16.11.6",
 		"builtin-modules": "3.3.0",
 		"esbuild": "^0.24.2",
