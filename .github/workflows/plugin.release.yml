@@ -35,7 +35,7 @@ jobs:
               run: |
                   cd packages/plugin
                   echo "result=$(node tools/get-version.cjs)" >> "$GITHUB_OUTPUT"
-
+                  cd ../..
             - name: Push tag
               uses: actions-ecosystem/action-push-tag@v1
               with:
