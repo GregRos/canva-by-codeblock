@@ -34,7 +34,7 @@ export function parseLanguage<
 	if (noCanva === "") {
 		return {};
 	}
-	const kvps = noCanva.split(" ");
+	const kvps = noCanva.split(";;");
 	const props: any = {};
 	for (const kvp of kvps) {
 		const arr = kvp.split("=");

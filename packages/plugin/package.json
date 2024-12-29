@@ -1,7 +1,7 @@
 {
 	"name": "plugin",
 	"private": true,
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"description": "Obsidian plugin to embed Canva designs in your notes.",
 	"keywords": [],
 	"license": "MIT",
