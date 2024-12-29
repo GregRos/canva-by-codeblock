@@ -31,7 +31,7 @@ export function parseMeta<
 	const kvps = meta.split(";;");
 	const props: any = {};
 	for (const kvp of kvps) {
-		const arr = kvp.split("=");
+		const arr = kvp.split("=").map((x) => x.trim());
 		if (arr.length !== 2) {
 			throw new CanvaEmbedParseError("Bad meta entry", kvp);
 		}
